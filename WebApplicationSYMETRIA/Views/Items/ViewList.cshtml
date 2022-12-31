@@ -1,0 +1,17 @@
+﻿<h1>All Projects</h1>
+<h3>@Model.currCategory</h3>
+
+<div class = "row mt-5  mb-2">
+@{ 
+    foreach (var item in Model.getAllItems)
+    {
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="@item.img" alt="@item.name"/>
+            <h2>@item.name</h2>
+            <p>Project: @item.shortDesc</p>
+            <p>Budget: @item.price.ToString("c")</p>
+            <p><a class=" btn btn-warning" href="#">See Details</a></p>
+        </div>
+    }
+}
+</div>
